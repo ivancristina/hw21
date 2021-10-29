@@ -1,0 +1,250 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background: black;
+  justify-content: center;
+  align-items: center;
+  font-family: "montserrat", san-serif;
+  height: 100vh;
+}
+
+.shadow {
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 100% / 0.075),
+    0 2px 2px hsl(0deg 0% 100% / 0.075),
+    0 4px 4px hsl(0deg 0% 100% / 0.075),
+    0 8px 8px hsl(0deg 0% 100% / 0.075),
+    0 16px 16px hsl(0deg 0% 100% / 0.075)
+  ;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  background-image: url(https://i.pinimg.com/originals/e7/d0/b1/e7d0b12ecb83a6044244c37360b01ad4.jpg);
+  background-color: #b29967;
+  transform-style: preserve-3d;
+  animation: 3s ease-out 0s 1 flipper;
+  animation-fill-mode: forwards;  
+  transition: all 1s ease;
+  position: relative;
+  font-family: 'Special Elite', cursive;
+  font-size: x-large;
+  transform: scale(1.5);
+
+}
+.card .front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.card .front .circle {
+  width: 80px;
+  height: 80px;
+  border: 8px solid #000;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+.card .front .triangle {
+  position: relative;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 80px solid #000;
+}
+.card .front .triangle:before {
+  width: 75px;
+  height: 64px;
+  content: " ";
+  background: url(https://i.pinimg.com/originals/e7/d0/b1/e7d0b12ecb83a6044244c37360b01ad4.jpg) center center;
+  clip-path: polygon(50% 5%, 0% 100%, 100% 100%);
+  position: absolute;
+  top: 10px;
+  left: -37px;
+}
+.card .front .square {
+  width: 80px;
+  height: 80px;
+  border: 8px solid #000;
+  margin-left: 0.5em;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+.back .icon {
+  width: 80px;
+  height: 80px;
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Jack_o_Lantern_%2880432%29_-_The_Noun_Project.svg");
+  margin-right: .5em;
+}
+.code {
+  font-family: 'Special Elite', cursive;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #00000018;
+  border-radius: 5px;
+  border: black 1px;
+  height: 2.5rem;
+  width: 90px;
+  outline: none;
+  margin-left: .35em;
+  margin-top: .25em;
+}
+
+.code::placeholder {
+  font-family: 'Special Elite', cursive;
+  color: #00000099;
+}
+
+.code::selection {
+  color: darkred;
+}
+
+@keyframes flipper {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+#valida {
+  position: fixed;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  text-decoration:none;
+  color:#FFF;
+  text-transform: uppercase;
+  transition: ease 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: none;
+
+}
+.rainbow-button {
+  --primary-neon:rgba(244,71,134,.9);
+  --light-neon:rgba(237,27,118,.7);
+  --pulse-neon:rgba(237,27,118,.5);
+  --bright-neon:rgba(237,27,118,1);
+  --off-neon:#333;
+  
+  --neon-shadow:0 0 7px 4px var(--light-neon), 0 0 7px 4px var(--light-neon) inset;
+  --neon-shadow-pulse:0 0 8px 5px var(--pulse-neon), 0 0 8px 5px var(--pulse-neon) inset;
+  --neon-shadow-bright:0 0 8px 4px var(--bright-neon), 0 0 8px 4px var(--bright-neon) inset;
+  --neon-shadow-text:0 0 7px var(--primary-neon);
+  
+  width:calc(20vw + 6px);
+  height:calc(8vw + 6px);
+  color:var(--primary-neon);
+  text-shadow:var(--neon-shadow-text);
+  border:3px solid var(--primary-neon);
+  border-radius:5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  font-size:3vw;
+  font-weight:bold;
+  box-shadow:var(--neon-shadow);
+  animation:flicker 10s linear infinite;
+}
+
+@keyframes flicker {
+  0% {
+    box-shadow:var(--neon-shadow);
+  }
+  45% {
+    box-shadow:var(--neon-shadow-pulse);
+  }
+  90% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+    color:var(--primary-neon);
+    text-shadow:var(--neon-shadow-text);
+  }
+  90.01% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+    color:var(--off-neon);
+    text-shadow:none;
+  }
+  94% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+  }
+  94.01% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+  }
+  95% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+  }
+  95.01% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+  }
+  95.5% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+  }
+  95.51% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+  }
+  96% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+  }
+  96.01% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+  }
+  96.5% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+  }
+  96.51% {
+    box-shadow:var(--neon-shadow-bright);
+    border-color:var(--primary-neon);
+  }
+  100% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+  }
+}
+.rainbow-button:hover{
+  background:var(--pulse-neon)!important;
+  color: #050801;
+  transition: ease 1s;
+  box-shadow: 0 0 5px var(--pulse-neon),
+              0 0 25px var(--pulse-neon),
+              0 0 50px var(--pulse-neon),;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}

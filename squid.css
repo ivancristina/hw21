@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+body {
+    height: 800vh;
+    background: black;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+  }
+
+  svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+#startgame {
+    position: fixed;
+    left: 50.5%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    text-decoration:none;
+    color:#FFF;
+    text-transform: uppercase;
+    transition: ease 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+  }
+  .rainbow-button {
+    --primary-neon:rgba(244,71,134,.9);
+    --light-neon:rgba(237,27,118,.7);
+    --pulse-neon:rgba(237,27,118,.5);
+    --bright-neon:rgba(237,27,118,1);
+    --off-neon:#333;
+    
+    --neon-shadow:0 0 7px 4px var(--light-neon), 0 0 7px 4px var(--light-neon) inset;
+    --neon-shadow-pulse:0 0 8px 5px var(--pulse-neon), 0 0 8px 5px var(--pulse-neon) inset;
+    --neon-shadow-bright:0 0 8px 4px var(--bright-neon), 0 0 8px 4px var(--bright-neon) inset;
+    --neon-shadow-text:0 0 7px var(--primary-neon);
+    
+    width:calc(20vw + 6px);
+    height:calc(8vw + 6px);
+    color:var(--primary-neon);
+    text-shadow:var(--neon-shadow-text);
+    border:3px solid var(--primary-neon);
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-transform:uppercase;
+    font-size:3vw;
+    font-weight:bold;
+    box-shadow:var(--neon-shadow);
+    animation:flicker 10s linear infinite;
+  }
+  
+  @keyframes flicker {
+    0% {
+      box-shadow:var(--neon-shadow);
+    }
+    45% {
+      box-shadow:var(--neon-shadow-pulse);
+    }
+    90% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+      color:var(--primary-neon);
+      text-shadow:var(--neon-shadow-text);
+    }
+    90.01% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+      color:var(--off-neon);
+      text-shadow:none;
+    }
+    94% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+    }
+    94.01% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+    }
+    95% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+    }
+    95.01% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+    }
+    95.5% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+    }
+    95.51% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+    }
+    96% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+    }
+    96.01% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+    }
+    96.5% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+    }
+    96.51% {
+      box-shadow:var(--neon-shadow-bright);
+      border-color:var(--primary-neon);
+    }
+    100% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+    }
+  }
+  .rainbow-button:hover{
+    background:var(--pulse-neon);
+    color: #050801;
+    transition: ease 1s;
+    box-shadow: 0 0 5px var(--pulse-neon),
+                0 0 25px var(--pulse-neon),
+                0 0 50px var(--pulse-neon),;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+  }

@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Card Code</title>
+  <link rel="stylesheet" href="card.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body translate="no" data-new-gr-c-s-check-loaded="14.1035.0" data-gr-ext-installed="">
+
+  <div class="card shadow">
+    <div class="front">
+      <div class="circle"></div>
+      <div class="triangle"></div>
+      <div class="square"></div>
+    </div>
+    <div class="back">
+      <div class="icon"></div>
+      <input id="code1" class="code" type="text" placeholder="XXXX" onkeydown="search()" onKeyPress="if(this.value.length==4) return false;"></input>
+      <input id="code2" class="code" type="text" placeholder="XXXX" onkeydown="search()" onKeyPress="if(this.value.length==4) return false;"></input>
+    </div>
+  </div>
+  <button id="valida" class="rainbow-button" onclick="Codice()">Valida</a>
+  <script
+    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+  <script>
+    window.onload = $("#code1").focus();
+    function search() {
+    if(event.keyCode == 13) {
+        Codice();
+      }
+    }
+    function Codice() {
+      code1 = document.getElementById("code1").value;
+      code2 = document.getElementById("code2").value;
+      switch (true) {
+
+      case (code1 == 1120 && code2 == 1310) :
+        window.location.replace("giulia.html");
+        break;
+      case (code1 == 5100 && code2 == 5329) :
+        window.location.replace("laura.html");
+        break;
+      case (code1 == 1910 && code2 == 7523) :
+        window.location.replace("viviana.html");
+        break;
+      case (code1 == 2940 && code2 == 8100) :
+        window.location.replace("ilaria.html");
+        break;
+      case (code1 == 1110 && code2 == 6215) :
+        window.location.replace("edoardo.html");
+        break;
+      case (code1 == 1265 && code2 == 1321) :
+        window.location.replace("guest.html");
+        break;
+
+      default:
+        alert("Il codice non è valido.");
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

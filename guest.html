@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn | @ivancristina
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HW.31/10/21</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/main.css" />
+		<noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<img id="avatar" src="images/avatar.jpg">
+							<!-- span class="icon fa-diamond"></span -->
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1 id="player">Giocatore Imprevisto</h1>
+								<p>Codice #<b><span id="code">XXXX-XXXX</span></b><br/>
+								Debiti: $ <span id="debit">1.259.054,78</span></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#challenge">Sfida</a></li>
+								<li><a href="#help">Aiuto</a></li>
+								<li><a href="#leave" class="leave">Abbandona</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Sfida -->
+							<article id="challenge">
+								<h2 class="major">Sfida</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>Sfida psicologica. <b><span id="name">Giocatore</span></b>, rispondi alla seguente domanda.</p>
+								<blockquote>Cosa fa rima con X e Y?</blockquote>
+								<p>Il risultato va conferito entro 10 minuti dall'inizio del gioco, pena l'eliminazione.
+									Tempo limite: <b><span id='tempo-limite'></span></b></p>
+
+							</article>
+
+						<!-- Aiuto -->
+							<article id="help">
+								<h2 class="major">Aiuto</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+
+								<ul>
+									<li>Potrai usare un solo aiuto · <strong>Vuoi continuare?</strong></li>
+								</ul>
+							</article>
+
+						<!-- Abbandona -->
+							<article id="leave">
+								<h2 class="major">Abbandona</h2>
+
+								<section>
+									<p>Sicuro di voler abbandonare il gioco?</p>
+									<a href="#confirm" class="button leave icon fas fa-running">Abbandona</a>
+								</section>
+
+							</article>
+
+						<!-- Abbandona -->
+							<article id="confirm">
+								<h2 class="major">Codice di uscita</h2>
+								<section>
+									<form method="post" action="#exit">
+										<div class="fields">
+											
+											<div class="field">
+												<label for="demo-message">Per maggiori informazioni contatta il Frontman</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Scrivi il tuo codice di uscita" rows="1"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Termina il gioco" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+							</article>
+
+						<!-- Uscita -->
+						<article id="exit">
+							<h2 class="major">Gioco terminato</h2>
+							<section>
+								<p>Il giocatore #<b><span id="code2">XXXX-XXXX</span></b> ha terminato il gioco.</p>
+							</section>
+						</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">31/10/2021. <em>Save the date.</em></p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/browser.min.js"></script>
+			<script src="js/breakpoints.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+			<script>
+				var code = "1265-1321"
+				document.getElementById('code').innerHTML=code;
+				document.getElementById('code2').innerHTML=code;
+				document.getElementById('debit').innerHTML=((Math.floor(Math.random() * 100)+99)+"."+(Math.floor(Math.random() * 900)+99)+"."+(Math.floor(Math.random() * 900)+99)+","+Math.floor(Math.random() * 100));
+				var dt = new Date();
+				dt.setMinutes(dt.getMinutes() + 10);
+				document.getElementById('tempo-limite').innerHTML=dt;
+				
+			</script>
+
+	</body>
+</html>
