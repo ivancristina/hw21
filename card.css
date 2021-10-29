@@ -138,7 +138,7 @@ body {
 }
 .code {
   font-family: 'Special Elite', cursive;
-  font-size: xx-large;
+  font-size: x-large;
   font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
@@ -181,8 +181,6 @@ body {
     transform: rotateY(180deg);
   }
 }
-
-
 
 #valida {
   position: fixed;
