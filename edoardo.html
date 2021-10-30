@@ -53,7 +53,7 @@
 								<span class="image main"><img src="img/pic01.jpg" alt="" /></span>
 								<p>Sfida psicologica. <b><span id="name">Giocatore</span></b>, rispondi alla seguente domanda.</p>
 								<blockquote>Cosa fa rima con X e Y?</blockquote>
-								<p>Il risultato va conferito entro 10 minuti dall'inizio del gioco, pena l'eliminazione.
+								<p>Il risultato va conferito entro 20 minuti dall'inizio del gioco, pena l'eliminazione.
 									Tempo limite: <b><span id='tempo-limite'></span></b></p>
 
 							</article>
@@ -137,7 +137,7 @@
 				document.getElementById('code2').innerHTML=code;
 				document.getElementById('debit').innerHTML=((Math.floor(Math.random() * 100)+99)+"."+(Math.floor(Math.random() * 900)+99)+"."+(Math.floor(Math.random() * 900)+99)+","+Math.floor(Math.random() * 100));
 				var dt = new Date();
-				dt.setMinutes(dt.getMinutes() + 10);
+				dt.setMinutes(dt.getMinutes() +20);
 				document.getElementById('tempo-limite').innerHTML=dt;
 				
 			</script>
