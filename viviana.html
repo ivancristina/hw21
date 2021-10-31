@@ -180,20 +180,20 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 							<li>5136 - Una cifra corretta ed al posto giusto</li>
 						</ul>
 						<p>Il risultato va conferito entro 15 minuti dall'inizio del gioco, pena l'eliminazione di <b>tutti i concorrenti</b>. <b>Non sono previsti aiuti</b>.</p>
-							<form>
-								<div class="fields">
+						<form>
+							<div class="fields">
 									
-									<div class="field">
-										<label for="demo-message">Inserisci la tua risposta</label>
-										<textarea id="group-code" onkeydown="InvioGruppo()" placeholder="Fornisci ila tua risposta" rows="1"></textarea>
-									</div>
+								<div class="field">
+									<label for="demo-message">Inserisci la tua risposta</label>
+									<textarea id="group-code" onkeydown="InvioGruppo()" placeholder="Fornisci la tua risposta" rows="1"></textarea>
 								</div>
-								<ul class="actions">
-									<li><button id="risposta" class="button icon fa-question" onclick="RispostaGruppo()">Rispondi</button></li>
-									<li><input type="reset" value="Reset" /></li>
-								</ul>
-							</form>
-						</article>
+							</div>
+							<ul class="actions">
+								<li><button id="rispostagruppo" class="button icon fa-question" onclick="Gruppo()">Rispondi</button></li>
+								<li><input type="reset" value="Reset" /></li>
+							</ul>
+						</form>
+					</article>
 
 				</div>
 
@@ -243,7 +243,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				function Risposta() {
 					if (document.getElementById("answer-code").value == answer) window.location.replace("#win");
 				}
-				function Risposta() {
+				function Gruppo() {
 					if (document.getElementById("group-code").value == "9876") window.location.replace("#win");
 				}
 				function InvioEsci() {
@@ -256,6 +256,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					if(event.keyCode == 13) {
 						event.preventDefault();
 						Risposta();
+					}
+				}
+				function InvioGruppo() {
+					if(event.keyCode == 13) {
+						event.preventDefault();
+						Gruppo();
 					}
 				}
 				</script>
