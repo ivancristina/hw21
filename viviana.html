@@ -50,7 +50,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				<!-- Sfida -->
 				<article id="challenge">
 					<h2 class="major">Sfida</h2>
-					<p><b><span id="name">Giocatore</span></b>, trova il seguente codice.</p>
+					<p><b><a href="#group" id="name">Giocatore</a></b>, trova il seguente codice.</p>
 					<blockquote id="riddle">Cosa fa rima con X e Y?</blockquote>
 					<p>Il risultato va conferito entro 20 minuti dall'inizio del gioco, pena l'eliminazione.
 						Tempo limite: <b><span id='tempo-limite'>20 minuti a partire da adesso</span></b>.</p>
@@ -165,6 +165,35 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 							<a href="#" class="button icon fa-redo">Ritenta</a>
 						</section>
 					</article>
+					
+					<!-- Sfida Gruppo -->
+					<article id="group">
+						<h2 class="major">Sfida di Gruppo</h2>
+						<p><b>Giocatori</b>, trovate il seguente codice da <b>4 cifre</b>.</p>
+						<ul>
+							<li>3548 - Una cifra corretta ma al posto sbagliato</li>
+							<li>4671 - Due cifre corrette ma solo una a posto giusto</li>
+							<li>3781 - Due cifre corrette ma al posto sbagliato</li>
+							<li>8397 - Una cifra è sbagliata, le altre sono al posto sbagliato</li>
+							<li>5124 - Tutte le cifre sbagliate</li>
+							<li>2934 - Una cifra corretta ma al posto sbagliato</li>
+							<li>5136 - Una cifra corretta ed al posto giusto</li>
+						</ul>
+						<p>Il risultato va conferito entro 15 minuti dall'inizio del gioco, pena l'eliminazione di <b>tutti i concorrenti</b>. <b>Non sono previsti aiuti</b>.</p>
+							<form>
+								<div class="fields">
+									
+									<div class="field">
+										<label for="demo-message">Inserisci la tua risposta</label>
+										<textarea id="group-code" onkeydown="InvioGruppo()" placeholder="Fornisci ila tua risposta" rows="1"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><button id="risposta" class="button icon fa-question" onclick="Risposta()">Rispondi</button></li>
+									<li><input type="reset" value="Reset" /></li>
+								</ul>
+							</form>
+						</article>
 
 				</div>
 
@@ -213,6 +242,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				}
 				function Risposta() {
 					if (document.getElementById("answer-code").value == answer) window.location.replace("#win");
+				}
+				function Risposta() {
+					if (document.getElementById("group-code").value == "9876") window.location.replace("#win");
 				}
 				function InvioEsci() {
 					if(event.keyCode == 13) {
