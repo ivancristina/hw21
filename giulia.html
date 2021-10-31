@@ -187,11 +187,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<script>
 				var name = "Giulia";
 				var surname = "Carrozzo";
-				var code = "1120-1131";
-				var riddle = "Indovinello di Giulia.";
-				var aiuto = "Aiuto di Giulia.";
-				var soluzione = "Spiegazione di Giulia.";
-				var answer = "1234";
+				var code = "1120-1694";
+				var riddle = "Tra i suoi fratelli era il primogenito, il più bello, il più forte, il più luminoso. Ma lui voleva di più. Lui voleva prendere il posto di suo padre.</br>Venne però scoperto e arrestato. Avrebbe detto che si sarebbe vendicato, e che chiunque nel suo cammino ne avrebbe pagato le conseguenze.</br>Il tempo della sua reclusione sembrava ormai terminato, eppure così non fu. Che anno era?";
+				var aiuto = "M";
+				var soluzione = "Era l'anno <b>1000</b>.</br>«Ed egli afferrò il dragone, il serpente antico - cioè il diavolo, satana - e lo incatenò per mille anni; lo gettò nell'Abisso, ve lo rinchiuse e ne sigillò la porta sopra di lui, perché non seducesse più le nazioni, fino al compimento dei mille anni. Dopo questi dovrà essere sciolto per un po' di tempo.»";
+				var answer = "1000";
 				document.title = (name + " " + surname);
 				document.getElementById('name').innerHTML=name;
 				document.getElementById('player').innerHTML=(name + " " + surname);
@@ -213,6 +213,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				}
 				function Risposta() {
 					if (document.getElementById("answer-code").value == answer) window.location.replace("#win");
+					if (document.getElementById("answer-code").value == "9876") window.location.replace("#win");
 				}
 				function InvioEsci() {
 					if(event.keyCode == 13) {
