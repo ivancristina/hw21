@@ -1,78 +1,98 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title>Card Code</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="card.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+	<meta charset="UTF-8">
+	<title>Card Code</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="card.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="backgound"></div>
-<div class="center">
-  <div class="card">
-    <div class="flip">
-      <div class="front">
-        <div class="holder">
-          <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Jack_o_Lantern_%2880432%29_-_The_Noun_Project.svg"/>
-          <input id="code1" class="code" type="text" placeholder="XXXX" onkeydown="search()" onKeyPress="if(this.value.length==4) return false;"></input>
-          <input id="code2" class="code" type="text" placeholder="XXXX" onkeydown="search()" onKeyPress="if(this.value.length==4) return false;"></input>
-        </div>
-      </div>
-      <div class="back"><img class="logo" src="img/front.png"/></div>
-    </div>
-  </div>
-</div>
-<button id="valida" class="rainbow-button" onclick="Codice()">Valida</a>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js'></script><script  src="./card.js"></script>
-  <script
-      src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
-    <script>
-      window.onload = $("#code1").focus();
-      function search() {
-      if(event.keyCode == 13) {
-          Codice();
-        }
-      }
-      function Codice() {
-        code1 = document.getElementById("code1").value;
-        code2 = document.getElementById("code2").value;
-        switch (true) {
+	<!-- partial:index.partial.html -->
+	<div class="backgound"></div>
+	<div class="center">
+		<div class="card">
+			<div class="flip">
+				<div class="front">
+					<div class="holder">
+						<img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Jack_o_Lantern_%2880432%29_-_The_Noun_Project.svg"/>
+						<input id="code1" class="code" type="text" placeholder="XXXX" onkeydown="search()" onKeyPress="if(this.value.length==4) return false;"></input>
+						<input id="code2" class="code" type="text" placeholder="XXXX" onkeydown="search()" onKeyPress="if(this.value.length==4) return false;"></input>
+					</div>
+				</div>
+				<div class="back"><img class="logo" src="img/front.png"/></div>
+			</div>
+		</div>
+	</div>
+	<button id="valida" class="rainbow-button" onclick="Codice()">Valida</a>
+		<!-- partial -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js'></script><script  src="./card.js"></script>
+		<script
+		src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+		<script>
+			window.onload = $("#code1").focus();
+			function search() {
+				if(event.keyCode == 13) {
+					Codice();
+				}
+			}
+			function Codice() {
+				code1 = document.getElementById("code1").value;
+				code2 = document.getElementById("code2").value;
+				
+				switch (true) {
   
-        case (code1 == 1120 && code2 == 1310) :
-          window.location.replace("giulia.html");
-          break;
-        case (code1 == 5100 && code2 == 5329) :
-          window.location.replace("laura.html");
-          break;
-        case (code1 == 1910 && code2 == 7523) :
-          window.location.replace("viviana.html");
-          break;
-        case (code1 == 2940 && code2 == 8100) :
-          window.location.replace("ilaria.html");
-          break;
-        case (code1 == 1110 && code2 == 6215) :
-          window.location.replace("edoardo.html");
-          break;
-        case (code1 == 1265 && code2 == 1321) :
-          window.location.replace("guest.html");
-          break;
+				case (code1 == 1120 && code2 == 1694 || code1 == 1120 && code2 == 9876) :
+					window.location.replace("giulia.html");
+					break;
+				case (code1 == 5100 && code2 == 8480 || code1 == 5100 && code2 == 9876) :
+					window.location.replace("laura.html");
+					break;
+				case (code1 == 1910 && code2 == 4141 || code1 == 1910 && code2 == 9876) :
+					window.location.replace("viviana.html");
+					break;
+				case (code1 == 2940 && code2 == 0194 || code1 == 2940 && code2 == 9876 || code1 == 2940 && code2 == 194) :
+					window.location.replace("ilaria.html");
+					break;
+				case (code1 == 1110 && code2 == 4242 || code1 == 1110 && code2 == 9876) :
+					window.location.replace("edoardo.html");
+					break;
+				case (code1 == 1265 && code2 == 1310 || code1 == 1265 && code2 == 9876) :
+					window.location.replace("guest.html");
+					break;
+		  
+				case (code1 == 1120 && code2 != 1694) :
+					alert("Giulia, ecco l'indizio per la seconda parte del codice:\r\nTrova il codice a 4 cifre in cui la prima cifra è un quarto dell'ultima, la seconda è 6 volte la prima e la terza è la seconda più 3.");
+					break;
+				case (code1 == 5100 && code2 != 8480) :
+					alert("Laura, ecco l'indizio per la seconda parte del codice:\r\nTrova il codice a 4 cifre in cui la presenza dell'ultima cifra decuplica, la prima e la terza cifra sono il reciproco riflesso, e la seconda cifra è la metà della seconda.");
+					break;
+				case (code1 == 1910 && code2 != 4141) :
+					alert("Viviana, ecco l'indizio per la seconda parte del codice:\r\nTrova il codice a 4 cifre in cui le decine sono 4 volte le unità, le centinaia sono di 3 punti più piccole delle unità. Le migliaia sono 4.");
+					break;
+				case (code1 == 2940 && code2 != 0194) :
+					alert("Ilaria, ecco l'indizio per la seconda parte del codice:\r\nTrova il codice a 4 cifre in cui la cifra delle decine è più grande della unita di 5. Quella delle centinaia è inferiore delle decine di 8.");
+					break;
+				case (code1 == 1110 && code2 != 4242) :
+					alert("Edoardo, ecco l'indizio per la seconda parte del codice:\r\nSono la risposta alla domanda fondamentale sulla vita, l'universo e tutto quanto. Ripetimi due volte.");
+					break;
+				case (code1 == 1265 && code2 != 1310) :
+					alert("Giocatore, ecco l'indizio per la seconda parte del codice:.");
+					break;
   
-        default:
-          alert("Il codice non è valido.");
-        }
-      }
-    </script>
+				default:
+					alert("Il codice non è valido.");
+				}
+			}
+			</script>
   
   
-  </body>
+		</body>
   
-  </html>
-</html>
+		</html>
+		</html>
