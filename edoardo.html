@@ -85,7 +85,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					<!-- Segreto -->
 					<article id="secret">
 						<h2 class="major">Segreto</h2>
-						<span class="image main"><img src="img/pic02.jpg" alt="" /></span>
+						<span class="image main"><img id="hintpic" src="img/pic02.jpg" alt="" /></span>
 
 						<section>
 							<blockquote id="aiuto">Ecco il tuo segreto</blockquote>
@@ -230,6 +230,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				document.getElementById('code3').innerHTML=code;
 				document.getElementById('riddle').innerHTML=riddle;
 				document.getElementById('aiuto').innerHTML=aiuto;
+				document.getElementById('hintpic').src = ("img/pic" + name + ".jpg");
 				document.getElementById('soluzione').innerHTML=soluzione;
 				document.getElementById('debit').innerHTML=((Math.floor(Math.random() * 100)+99)+"."+(Math.floor(Math.random() * 900)+99)+"."+(Math.floor(Math.random() * 900)+99)+","+Math.floor(Math.random() * 100));
 				var dt = new Date();
